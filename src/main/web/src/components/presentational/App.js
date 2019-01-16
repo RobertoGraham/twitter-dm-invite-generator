@@ -56,10 +56,10 @@ class App extends Component {
                     </h5>
                     <h6
                         className="text-muted text-center">
-                        Enable your Privacy setting <a
+                        Your Privacy setting <a
                         href="https://twitter.com/settings/safety">
                         "Receive Direct Messages from anyone"
-                    </a> to invites appear properly
+                    </a> must be enabled for invites to appear properly!
                     </h6>
                     <a
                         className="github-button"
