@@ -1,5 +1,6 @@
 package io.github.robertograham.dminvitegenerator.service;
 
+import io.github.robertograham.dminvitegenerator.dto.GenerateDmInviteLinkResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -18,15 +19,16 @@ public final class DmInviteLinkService {
         this.twitter = Objects.requireNonNull(twitter, "twitter cannot be null");
     }
 
-    public String generatedDmInviteLink(final String userDisplayName,
-                                        final String dmText) {
+    public GenerateDmInviteLinkResponse generatedDmInviteLink(final String userDisplayName,
+                                                              final String dmText) {
         try {
             final var user = twitter.showUser(userDisplayName);
-            return getUriComponentsBuilderInstance().queryParam("recipient_id", user.getId())
+            final var link = getUriComponentsBuilderInstance().queryParam("recipient_id", user.getId())
                 .queryParam("text", dmText)
                 .toUriString();
+            return new GenerateDmInviteLinkResponse(true, link);
         } catch (final TwitterException twitterException) {
-            return twitterException.getErrorMessage();
+            return new GenerateDmInviteLinkResponse(false, "");
         }
     }
 

@@ -1,0 +1,4 @@
+export default {
+    GENERATE_LINK: 'GENERATE_LINK',
+    LINK_GENERATED: 'LINK_GENERATED'
+};
