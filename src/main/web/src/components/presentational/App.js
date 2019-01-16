@@ -56,10 +56,10 @@ class App extends Component {
                     </h5>
                     <h6
                         className="text-muted text-center">
-                        Enable the Privacy setting <a
+                        Enable your Privacy setting <a
                         href="https://twitter.com/settings/safety">
                         "Receive Direct Messages from anyone"
-                    </a> to make invites work
+                    </a> to invites appear properly
                     </h6>
                     <a
                         className="github-button"
@@ -74,7 +74,7 @@ class App extends Component {
                     <Form.Group
                         controlId="formBasicEmail">
                         <Form.Label>
-                            Twitter username
+                            Your Twitter username
                         </Form.Label>
                         <InputGroup>
                             <InputGroup.Prepend>
@@ -82,7 +82,7 @@ class App extends Component {
                             </InputGroup.Prepend>
                             <Form.Control
                                 type="text"
-                                placeholder="Enter Twitter username"
+                                placeholder="Enter your Twitter username"
                                 aria-describedby="inputGroupPrepend"
                                 value={displayName}
                                 onChange={this.onDisplayNameFieldChange}/>
