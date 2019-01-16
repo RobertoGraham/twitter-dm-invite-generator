@@ -33,7 +33,8 @@ class App extends Component {
         });
     }
 
-    onSubmitButtonClicked() {
+    onSubmitButtonClicked(event) {
+        event.preventDefault();
         const {actions} = this.props;
         const {fetchLinkIfNeeded} = actions;
         const {displayName, text} = this.state;
@@ -113,15 +114,15 @@ class App extends Component {
                                 <Form.Control
                                     type="text"
                                     aria-describedby="test"
-                                    value={link}
-                                    disabled/>
+                                    value={link}/>
                                 <InputGroup.Append>
                                     <CopyToClipboard
                                         text={link}
                                         onCopy={() => this.setState({copied: true})}>
                                         <Button
                                             variant="primary"
-                                            type="submit">
+                                            type="submit"
+                                            onClick={(event) => event.preventDefault()}>
                                             Copy!
                                         </Button>
                                     </CopyToClipboard>
