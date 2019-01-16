@@ -70,7 +70,7 @@ class App extends Component {
                         Star
                     </a>
                 </header>
-                <Form>
+                <Form className="mb-3">
                     <Form.Group
                         controlId="formBasicEmail">
                         <Form.Label>
@@ -110,7 +110,7 @@ class App extends Component {
                 {
                     typeof success !== 'undefined' ?
                         success === true ?
-                            <InputGroup className="mt-3">
+                            <InputGroup className="mb-3">
                                 <Form.Control
                                     type="text"
                                     aria-describedby="test"
@@ -128,12 +128,12 @@ class App extends Component {
                                     </CopyToClipboard>
                                 </InputGroup.Append>
                             </InputGroup>
-                            : <p className="mt-3">No such user!</p>
+                            : <p className="mb-3">No such user!</p>
                         : <React.Fragment/>
                 }
                 {
                     copied ?
-                        <p className="mt-2 text-muted">Copied!</p>
+                        <p className="mt-2 text-muted mb-3">Copied!</p>
                         : <React.Fragment/>
                 }
             </Container>
