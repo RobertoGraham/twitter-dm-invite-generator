@@ -50,10 +50,10 @@ class App extends Component {
             <Container>
                 <header
                     className="mt-3 mb-3">
-                    <h1
+                    <h5
                         className="text-center">
                         DM Invite Generator
-                    </h1>
+                    </h5>
                     <h6
                         className="text-muted text-center">
                         Enable the Privacy setting <a
