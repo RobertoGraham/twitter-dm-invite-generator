@@ -11,10 +11,10 @@ import twitter4j.conf.ConfigurationBuilder;
 public class TwitterConfiguration {
 
     @Bean
-    public Twitter twitter(@Value("twitter.consumerKey") final String consumerKey,
-                           @Value("twitter.consumerSecret") final String consumerSecret,
-                           @Value("twitter.accessToken") final String accessToken,
-                           @Value("twitter.accessTokenSecret") final String accessTokenSecret) {
+    public Twitter twitter(@Value("${twitter.consumerKey}") final String consumerKey,
+                           @Value("${twitter.consumerSecret}") final String consumerSecret,
+                           @Value("${twitter.accessToken}") final String accessToken,
+                           @Value("${twitter.accessTokenSecret}") final String accessTokenSecret) {
         return new TwitterFactory(
             new ConfigurationBuilder()
                 .setOAuthConsumerKey(consumerKey)
