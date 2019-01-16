@@ -1,1 +1,1 @@
-web: java -Dtwitter.consumerKey=$CONSUMER_KEY -Dtwitter.consumerSecret=$CONSUMER_SECRET -Dtwitter.accessToken=$ACCESS_TOKEN -Dtwitter.accessTokenSecret=$ACCESS_TOKEN_SECRET -jar target/*.jar
+web: java -Dtwitter.consumerKey=$CONSUMER_KEY -Dtwitter.consumerSecret=$CONSUMER_SECRET -Dtwitter.accessToken=$ACCESS_TOKEN -Dtwitter.accessTokenSecret=$ACCESS_TOKEN_SECRET -Dserver.port=$PORT -jar target/*.jar
